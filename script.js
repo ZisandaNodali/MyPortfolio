@@ -1,6 +1,15 @@
-document.querySelector('.hero button').addEventListener('click', function() {
+document.querySelector('#download-cv').addEventListener('click', function () {
     alert('CV download initiated!');
+
+    // Create a hidden link element
+    const link = document.createElement('a');
+    link.href = 'Images/ZisandaNodaliCV.pdf'; // update path if needed
+    link.download = 'Zisanda-Nodali-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
+
 
 // Function to check if an element is in the viewport
 function isInViewport(element) {
