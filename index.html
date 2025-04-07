@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar / Navigation -->
+    <div class="top-bar">
+        <div class="logo">Zisanda</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">My Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="home">
+        <div class="hero">
+            <img src="Images\pixeltrue-web-development.png" alt="Zisanda Nodali">
+            <h1>Hi there! My name is Zisanda Nodali and I'm a <span class="bounce">Software developer</span></h1>
+            <button>Download the CV</button>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a highly motivated software developer with passion for creating innovative solutions.</p>
+        <p>I possess a solid foundation in programming languages and problem solving.</p>
+        <p>My goal is to become a full-stack developer and contribute to the tech industry.</p>
+        <p>I am excited to collaborateand contribute to the development of software solutions.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Git</span>
+            <span>React</span>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project">Project 1</div>
+            <div class="project">Project 2</div>
+            <div class="project">Project 3</div>
+        </div>
+    </section>
+
+   <!-- Contact Me Form Section -->
+    <section id="contact-me" class="contact-me">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="contact">
+        <h2>Contacts</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope "></i><a href="mailto:zisandanodali01@gmail.com">zisandanodali01@gmail.com</a></p>
+            <p><i class="fas fa-phone "></i><a href="tel:+27836034236">+27 83 603 4236</a></p>
+            <p><i class="fab fa-linkedin "></i><a href="https://www.linkedin.com/in/zisanda-nodali" target="_blank">LinkedIn</a></p>
+            <p><i class="fab fa-github "></i><a href="https://github.com/ZisandaNodali" target="_blank">GitHub</a></p>
+        </div>
+        <p>&copy; 2025 ZNodali</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

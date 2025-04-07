@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    /*font-family: Arial, sans-serif;*/
+    font-family: Outfit;
+    color: black;
+    background-color: #ffffff;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4a2c59;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Reduced padding */
+    z-index: 1000;
+}
+
+/* Logo */
+.top-bar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0; /* Prevents it from shrinking */
+}
+
+/* Navigation Container */
+.top-bar nav {
+    flex-grow: 0; /* Prevents it from stretching */
+}
+
+/* Navigation List */
+.top-bar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px; /* Adjust spacing */
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+/* Ensure nav items stay within view */
+.top-bar nav li {
+    white-space: nowrap; /* Prevents text from breaking into a new line */
+}
+
+/* Navigation Links */
+.top-bar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px; /* Slightly reduce font size if needed */
+    transition: color 0.3s;
+    padding: 8px 12px; /* Adjust padding */
+}
+
+/* Ensure last nav item (Contact) stays visible */
+.top-bar nav ul li:last-child {
+    margin-right: 10px; /* Prevents last item from being pushed too far */
+}
+
+.top-bar nav a:hover {
+    color: #a065c0;
+}
+
+
+/* Hero Section */
+header {
+    background-image: url('Images\b0d1d3d12cb4336a4353b2a7b3ab4ffd.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    margin-top: 60px; /* Space for fixed top bar */
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.hero img {
+    width: 500px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes it circular if the image is square */
+    margin-bottom: 20px; /* Space between the image and the heading */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #a065c0;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply bounce to the 'Software developer' span */
+.bounce {
+    display: inline-block;
+    animation: bounce 2s ease 1, pause 4s ease 1 2s;; /* 1s duration, infinite loop */
+}
+/* Pause Animation */
+@keyframes pause {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 20px;
+}
+
+.skills-list span {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    background-color: #a065c0;
+    color: white;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #4a2c59;
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Style links in contact info */
+.contact-info a {
+    text-decoration: none;
+    color: black;
+    /*font-weight: bold;*/
+    transition: color 0.3s;
+}
+.contact-info a:hover {
+    color: #a065c0; /* Change color on hover */
+}
+/* Space between icon and text */
+.contact-info i {
+    margin-right: 10px; /* Adds space between icon and text */
+}
+
+/* Initial state of the About Me section */
+.about {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* When the About Me section is visible */
+.about.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Initial state of the Skills section */
+.skills {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* When the Skills section is visible */
+.skills.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Initial state of the Portfolio section */
+.portfolio {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* When the Portfolio section is visible */
+.portfolio.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Contact Me Form Section */
+.contact-me {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.contact-me form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label Styling */
+.contact-me label {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Input Fields Styling */
+.contact-me input, .contact-me textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Focus Effect */
+.contact-me input:focus, .contact-me textarea:focus {
+    border-color: #a065c0;
+    box-shadow: 0 0 5px rgba(160, 101, 192, 0.6);
+}
+
+/* Textarea Specific Styling */
+.contact-me textarea {
+    resize: vertical;
+    min-height: 150px; /* Ensures it's large enough for a message */
+}
+
+/* Submit Button Styling */
+.contact-me button {
+    padding: 12px 20px;
+    background-color: #a065c0;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Aligns the button to the left */
+}
+
+/* Button Hover Effect */
+.contact-me button:hover {
+    background-color: #7f4e99;
+}
+
+/* Responsive Design for Form */
+@media screen and (max-width: 768px) {
+    .contact-me form {
+        width: 90%;
+    }
+}
