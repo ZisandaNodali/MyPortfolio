@@ -140,6 +140,41 @@ section {
     padding: 50px 0;
     font-size: 20px;
 }
+/* About Me Section */
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid black; /* Optional: Adds a border around the image */
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 .skills-list span {
     display: inline-block;
