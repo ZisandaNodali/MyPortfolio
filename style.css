@@ -276,75 +276,54 @@ footer {
 }
 
 /* Contact Me Form Section */
+/* Contact Me Form Section - Smaller Card */
 .contact-me {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
+    background-color: whitesmoke;
+    padding: 30px 15px;
     margin-top: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* Form */
+/* Smaller Card Width */
 .contact-me form {
-    max-width: 600px;
+    max-width: 450px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* Label Styling */
+/* Smaller Labels */
 .contact-me label {
-    font-size: 18px;
+    font-size: 16px;
     color: black;
-    margin-bottom: 8px;
-    text-align: left;
+    margin-bottom: 6px;
 }
 
-/* Input Fields Styling */
-.contact-me input, .contact-me textarea {
-    padding: 12px;
-    font-size: 16px;
+/* Inputs and Textarea */
+.contact-me input,
+.contact-me textarea {
+    padding: 10px;
+    font-size: 15px;
     border: 2px solid #ddd;
     border-radius: 5px;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
-/* Focus Effect */
-.contact-me input:focus, .contact-me textarea:focus {
-    border-color: #a065c0;
-    box-shadow: 0 0 5px rgba(160, 101, 192, 0.6);
-}
-
-/* Textarea Specific Styling */
+/* Textarea height reduced */
 .contact-me textarea {
-    resize: vertical;
-    min-height: 150px; /* Ensures it's large enough for a message */
+    min-height: 120px;
 }
 
-/* Submit Button Styling */
+/* Button Styling */
 .contact-me button {
-    padding: 12px 20px;
-    background-color: #a065c0;
-    border: none;
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: center; /* Aligns the button to the left */
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 4px;
 }
-
-/* Button Hover Effect */
-.contact-me button:hover {
-    background-color: #7f4e99;
-}
-
-/* Responsive Design for Form */
+/* Responsive tweak (optional) */
 @media screen and (max-width: 768px) {
     .contact-me form {
-        width: 90%;
+        width: 95%;
     }
 }
