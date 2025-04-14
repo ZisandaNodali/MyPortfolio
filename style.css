@@ -1,12 +1,24 @@
+/* ===================== GLOBAL ===================== */
 body {
     margin: 0;
-    /*font-family: Arial, sans-serif;*/
     font-family: Outfit;
     color: black;
     background-color: #ffffff;
 }
 
-/* Top Bar Styling */
+section {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===================== TOP BAR ===================== */
 .top-bar {
     position: fixed;
     top: 0;
@@ -16,64 +28,60 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Reduced padding */
+    padding: 10px 20px;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
-/* Logo */
 .top-bar .logo {
     font-size: 20px;
     font-weight: bold;
-    flex-shrink: 0; /* Prevents it from shrinking */
+    flex-shrink: 0;
 }
 
-/* Navigation Container */
 .top-bar nav {
-    flex-grow: 0; /* Prevents it from stretching */
+    flex-grow: 0;
 }
 
-/* Navigation List */
 .top-bar nav ul {
     display: flex;
     list-style: none;
-    gap: 10px; /* Adjust spacing */
+    gap: 10px;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; /* Ensures responsiveness */
-}
-/* Ensure nav items stay within view */
-.top-bar nav li {
-    white-space: nowrap; /* Prevents text from breaking into a new line */
+    flex-wrap: wrap;
 }
 
-/* Navigation Links */
+.top-bar nav li {
+    white-space: nowrap;
+}
+
 .top-bar nav a {
     text-decoration: none;
     color: white;
-    font-size: 20px; /* Slightly reduce font size if needed */
+    font-size: 20px;
     transition: color 0.3s;
-    padding: 8px 12px; /* Adjust padding */
+    padding: 8px 12px;
 }
 
-/* Ensure last nav item (Contact) stays visible */
 .top-bar nav ul li:last-child {
-    margin-right: 10px; /* Prevents last item from being pushed too far */
+    margin-right: 10px;
 }
 
 .top-bar nav a:hover {
     color: #a065c0;
 }
 
-
-/* Hero Section */
+/* ===================== HERO ===================== */
 header {
-    background-image: url('Images\b0d1d3d12cb4336a4353b2a7b3ab4ffd.jpg');
+    background-image: url('Images/b0d1d3d12cb4336a4353b2a7b3ab4ffd.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 20px 0;
     color: white;
-    margin-top: 60px; /* Space for fixed top bar */
+    /*margin-top: 60px;*/
+    margin-top: 100px; /* Adjust if your nav gets taller */
 }
 
 .hero h1 {
@@ -83,15 +91,13 @@ header {
 }
 
 .hero img {
-    width: 500px; /* Adjust the size as needed */
+    width: 100%;
+    max-width: 300px;
     height: auto;
-    border-radius: 50%; /* Makes it circular if the image is square */
-    margin-bottom: 20px; /* Space between the image and the heading */
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
-
 
 .hero button {
     padding: 10px 20px;
@@ -101,49 +107,37 @@ header {
     border-radius: 20px;
     cursor: pointer;
 }
+
 /* Bounce Animation */
 @keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(-5px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
 }
 
-/* Apply bounce to the 'Software developer' span */
 .bounce {
     display: inline-block;
-    animation: bounce 2s ease 1, pause 4s ease 1 2s;; /* 1s duration, infinite loop */
-}
-/* Pause Animation */
-@keyframes pause {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    animation: bounce 2s ease 1, pause 4s ease 1 2s;
 }
 
-section {
-    text-align: center;
-    padding: 50px 0;
-    font-size: 20px;
+@keyframes pause {
+    0%, 100% { transform: translateY(0); }
 }
-/* About Me Section */
+
+/* ===================== ABOUT ===================== */
 .about {
     padding: 50px 20px;
     background-color: #f9f9f9;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.about.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-content {
@@ -151,6 +145,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .about-image {
@@ -158,7 +153,7 @@ section {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid black; /* Optional: Adds a border around the image */
+    border: 5px solid black;
 }
 
 .about-text {
@@ -173,7 +168,19 @@ section {
 
 .about p {
     font-size: 20px;
-    line-height: 1.4; /* Slightly reduced line spacing */
+    line-height: 1.4;
+}
+
+/* ===================== SKILLS ===================== */
+.skills {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.skills.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .skills-list {
@@ -214,69 +221,19 @@ section {
     color: #4a2c59;
 }
 
-
-footer {
-    background-color: #4a2c59;
-    color: black;
-    padding: 30px 0;
-    text-align: center;
-}
-
-/* Style links in contact info */
-.contact-info a {
-    text-decoration: none;
-    color: black;
-    /*font-weight: bold;*/
-    transition: color 0.3s;
-}
-.contact-info a:hover {
-    color: #a065c0; /* Change color on hover */
-}
-/* Space between icon and text */
-.contact-info i {
-    margin-right: 10px; /* Adds space between icon and text */
-}
-
-/* Initial state of the About Me section */
-.about {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
-}
-
-/* When the About Me section is visible */
-.about.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Initial state of the Skills section */
-.skills {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
-}
-
-/* When the Skills section is visible */
-.skills.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-/* Initial state of the Portfolio section */
+/* ===================== PORTFOLIO ===================== */
 .portfolio {
     opacity: 0;
     transform: translateX(-100%);
     transition: all 0.5s ease-in-out;
 }
 
-/* When the Portfolio section is visible */
 .portfolio.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
-/* Contact Me Form Section */
-/* Contact Me Form Section - Smaller Card */
+/* ===================== CONTACT ME FORM ===================== */
 .contact-me {
     background-color: whitesmoke;
     padding: 30px 15px;
@@ -285,7 +242,6 @@ footer {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* Smaller Card Width */
 .contact-me form {
     max-width: 450px;
     margin: 0 auto;
@@ -294,14 +250,12 @@ footer {
     gap: 15px;
 }
 
-/* Smaller Labels */
 .contact-me label {
     font-size: 16px;
     color: black;
     margin-bottom: 6px;
 }
 
-/* Inputs and Textarea */
 .contact-me input,
 .contact-me textarea {
     padding: 10px;
@@ -310,20 +264,130 @@ footer {
     border-radius: 5px;
 }
 
-/* Textarea height reduced */
 .contact-me textarea {
     min-height: 120px;
 }
 
-/* Button Styling */
 .contact-me button {
     padding: 10px 16px;
     font-size: 14px;
     border-radius: 4px;
 }
-/* Responsive tweak (optional) */
-@media screen and (max-width: 768px) {
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #4a2c59;
+    color: black;
+    padding: 1px 0; /* reduce top and bottom padding */
+    font-size: 16px; /* optional: reduce text size */
+    text-align: center;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #a065c0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-bar nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .top-bar nav a {
+        font-size: 18px;
+        padding: 10px 0;
+        display: block;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
     .contact-me form {
         width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .about p,
+    section {
+        font-size: 16px;
+        padding: 30px 10px;
+    }
+
+    .skill-card {
+        width: 80px;
+        padding: 10px 5px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hide nav by default on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .top-bar nav {
+        display: none;
+        width: 100%;
+    }
+
+    .top-bar nav.show {
+        display: block;
+    }
+
+    .top-bar nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .top-bar nav li {
+        padding: 10px 0;
+        width: 100%;
+        border-top: 1px solid #a065c0;
+    }
+
+    .top-bar nav a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
     }
 }

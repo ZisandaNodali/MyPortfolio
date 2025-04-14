@@ -36,3 +36,16 @@ window.addEventListener('scroll', function() {
         aboutSection.classList.add('visible');
     }
 });
+window.addEventListener('DOMContentLoaded', () => {
+    const topBar = document.querySelector('.top-bar');
+    const header = document.querySelector('header');
+
+    if (topBar && header) {
+      const navHeight = topBar.offsetHeight;
+      header.style.marginTop = navHeight + 'px';
+    }
+ });
+function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('show');
+}
