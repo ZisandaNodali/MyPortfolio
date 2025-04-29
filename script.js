@@ -21,7 +21,7 @@ function isInViewport(element) {
 window.addEventListener('scroll', function() {
     const aboutSection = document.querySelector('#about');
     if (isInViewport(aboutSection)) {
-        aboutSection.classList.add('visible');
+       aboutSection.classList.add('visible');
     }
 });
 window.addEventListener('scroll', function() {
