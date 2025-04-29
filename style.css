@@ -130,14 +130,9 @@ header {
 .about {
     padding: 50px 20px;
     background-color: #f9f9f9;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
-}
-
-.about.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
+    transition: none;
 }
 
 .about-content {

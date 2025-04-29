@@ -19,12 +19,6 @@ function isInViewport(element) {
 
 // Handle scroll event to add the 'visible' class
 window.addEventListener('scroll', function() {
-    const aboutSection = document.querySelector('#about');
-    if (isInViewport(aboutSection)) {
-       aboutSection.classList.add('visible');
-    }
-});
-window.addEventListener('scroll', function() {
     const aboutSection = document.querySelector('#skills');
     if (isInViewport(aboutSection)) {
         aboutSection.classList.add('visible');
