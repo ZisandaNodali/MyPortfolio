@@ -134,23 +134,38 @@
         </div>
     </section>
 
+    <!-- Certificates Section -->
+    <section id="certificate" class="certificates">
+        <h2>My Certificates</h2>
+        <p>You can view all my certifications in this GitHub folder:</p>
+        <a href="https://github.com/ZisandaNodali/MyPortfolio/tree/main/certificates" target="_blank" class="cert-link">
+            <i class="fas fa-folder-open"></i> View Certificates on GitHub
+        </a>
+    </section>
+
 
    <!-- Contact Me Form Section -->
     <section id="contact-me" class="contact-me">
-        <h2>Contact Me</h2>
+        <h2>Get In Touch</h2>
+        <p class="contact-intro">
+            I'd love to hear from you! Whether you have a question, suggestion, or just want to connect, feel free to reach out using the form below.
+        </p>
         <div class="card">
-        <form action="submit_form.php" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>
+            
         </div>
     </section>
 
