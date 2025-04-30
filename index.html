@@ -10,7 +10,9 @@
 <body>
     <!-- Top Bar / Navigation -->
     <div class="top-bar">
-        <div class="logo">Zisanda</div>
+        <a href="#home"
+            class="logo">Zisanda.
+        </a> 
         <!-- Hamburger Icon -->
         <div class="hamburger" onclick="toggleMenu()">
             ☰
@@ -20,9 +22,9 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">My Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificate">Certificates</a></li>
+                <!--<li><a href="#certificate">Certificates</a></li>-->
                 <li><a href="#contact-me">Contact</a></li>
             </ul>
         </nav>
@@ -33,7 +35,6 @@
         <div class="hero">
             <img src="Images\pixeltrue-web-development.png" alt="Zisanda Nodali">
             <h1>Hi there! My name is Zisanda Nodali and I'm a <span class="bounce">Software developer</span></h1>
-            <button id="download-cv">Download the CV</button>
         </div>
     </header>
 
@@ -42,58 +43,74 @@
         <div class="about-content">
             <img src="Images\IMG_9349.jpg" alt="ZisandaNodali" class="about-image">
             <div class="about-text">
-                <h2>About Me</h2>
+                <!--<h2>About Me</h2>-->
                 <p>I am a highly motivated software developer with passion for creating innovative solutions.
                     I possess a solid foundation in programming languages and problem solving.
                     My goal is to become a full-stack developer and contribute to the tech industry.
                     I am excited to collaborate and contribute to the development of software solutions.
                 </p>
+                <div class="download-container">
+                    <button id="download-cv" class="download-btn">Download the CV</button>
+                </div>                
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-<section id="skills" class="skills">
-    <h2>My Skills</h2>
-    <div class="skills-list">
-        <div class="skill-card">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                <img src="Images/icons8-html-50.png" alt="HTML">
-                <p>HTML</p>
+    <section class="skills-certificates-container">
+
+        <!-- Certificates Section -->
+        <section id="certificate" class="certificates">
+            <h2>My Certificates</h2>
+            <p>You can view all my certifications in this GitHub folder:</p>
+            <a href="https://github.com/ZisandaNodali/MyPortfolio/tree/main/certificates" target="_blank" class="cert-link">
+                <i class="fas fa-folder-open"></i> View Certificates on GitHub
             </a>
-        </div>
-        <div class="skill-card">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                <img src="Images/icons8-css-48.png" alt="CSS">
-                <p>CSS</p>
-            </a>  
-        </div>
-        <div class="skill-card">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                <img src="Images/icons8-javascript-48.png" alt="JavaScript">
-                <p>JavaScript</p>
-            </a>    
-        </div>
-        <div class="skill-card">
-            <a href="https://nodejs.org/en/about" target="_blank">
-                <img src="Images/icons8-nodejs-48.png" alt="Node.js">
-                <p>Node.js</p>
-            </a>
-        </div>
-        <div class="skill-card">
-            <a href="https://react.dev/learn" target="_blank">
-                <img src="Images/icons8-react-40.png" alt="React">
-                <p>React</p>
-            </a>  
-        </div>
-        <div class="skill-card">
-            <a href="https://git-scm.com/doc" target="_blank">
-                <img src="Images/icons8-git-48.png" alt="Git">
-                <p>Git</p>
-            </a>
-        </div>
-    </div>
-</section>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>My Skills</h2>
+            <div class="skills-list">
+                <!-- Skill cards here -->
+                <div class="skill-card">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                        <img src="Images/icons8-html-50.png" alt="HTML">
+                        <p>HTML</p>
+                    </a>
+                </div>
+                <div class="skill-card">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                        <img src="Images/icons8-css-48.png" alt="CSS">
+                        <p>CSS</p>
+                    </a>  
+                </div>
+                <div class="skill-card">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                        <img src="Images/icons8-javascript-48.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </a>    
+                </div>
+                <div class="skill-card">
+                    <a href="https://nodejs.org/en/about" target="_blank">
+                        <img src="Images/icons8-nodejs-48.png" alt="Node.js">
+                        <p>Node.js</p>
+                    </a>
+                </div>
+                <div class="skill-card">
+                    <a href="https://react.dev/learn" target="_blank">
+                        <img src="Images/icons8-react-40.png" alt="React">
+                        <p>React</p>
+                    </a>  
+                </div>
+                <div class="skill-card">
+                    <a href="https://git-scm.com/doc" target="_blank">
+                        <img src="Images/icons8-git-48.png" alt="Git">
+                        <p>Git</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -132,54 +149,56 @@
                 <a href="https://github.com/ZisandaNodali/quadjewells" target="_blank">View on GitHub</a>
             </div>
         </div>
+        <!-- See More Button -->
+        <div class="see-more-container">
+            <a href="https://github.com/ZisandaNodali?tab=repositories" target="_blank" class="see-more-btn">
+                <i class="fab fa-github"></i> See More
+            </a>
+        </div>
     </section>
-
-    <!-- Certificates Section -->
-    <section id="certificate" class="certificates">
-        <h2>My Certificates</h2>
-        <p>You can view all my certifications in this GitHub folder:</p>
-        <a href="https://github.com/ZisandaNodali/MyPortfolio/tree/main/certificates" target="_blank" class="cert-link">
-            <i class="fas fa-folder-open"></i> View Certificates on GitHub
-        </a>
-    </section>
-
 
    <!-- Contact Me Form Section -->
     <section id="contact-me" class="contact-me">
         <h2>Get In Touch</h2>
-        <p class="contact-intro">
-            I'd love to hear from you! Whether you have a question, suggestion, or just want to connect, feel free to reach out using the form below.
-        </p>
-        <div class="card">
-            <form name="contact" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact">
-                <input type="hidden" name="redirect" value="/thank-you.html">
+        
+
+        <div class="contact-container">
+            <!-- Left: Contact Info -->
+            <div class="contact-info">
+                <p class="contact-intro">
+                    I'd love to hear from you! Whether you have a question, suggestion, or just want to connect, feel free to reach out.
+                </p>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i><a href="mailto:zisandanodali01@gmail.com">zisandanodali01@gmail.com</a></p>
+                    <p><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/zisanda-nodali" target="_blank">LinkedIn</a></p>
+                    <p><i class="fab fa-github"></i><a href="https://github.com/ZisandaNodali" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="card">
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="redirect" value="/thank-you.html">
+                    
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
                 
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-            
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-            
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            
-                <button type="submit">Send Message</button>
-            </form>
-            
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <footer id="contact" class="contact">
-        <h2>Contacts</h2>
-        <div class="contact-info">
-            <p><i class="fas fa-envelope "></i><a href="mailto:zisandanodali01@gmail.com">zisandanodali01@gmail.com</a></p>
-            <p><i class="fas fa-phone "></i><a href="tel:+27836034236">+27 83 603 4236</a></p>
-            <p><i class="fab fa-linkedin "></i><a href="https://www.linkedin.com/in/zisanda-nodali" target="_blank">LinkedIn</a></p>
-            <p><i class="fab fa-github "></i><a href="https://github.com/ZisandaNodali" target="_blank">GitHub</a></p>
-        </div>
-        <p>&copy; 2025 ZNodali</p>
+    <!-- Footer Section -->
+    <footer class="contact">
+        <p>&copy; 2025 ZNodali. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
