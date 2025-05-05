@@ -83,11 +83,26 @@ header {
     background-image: url('Images/b0d1d3d12cb4336a4353b2a7b3ab4ffd.jpg');
     background-size: cover;
     background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center horizontally */
     text-align: center;
-    padding: 20px 0;
+    padding: 0 20px;
     color: white;
-    /*margin-top: 60px;*/
-    margin-top: 100px; /* Adjust if your nav gets taller */
+    margin-top: 0; /* Remove margin if using full height */
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Full height of the header */
+    width: 100%;
+    padding: 40px 0;
 }
 
 .hero h1 {
@@ -98,43 +113,52 @@ header {
 
 .hero img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    border-radius: 50%;
-    margin: 0 auto 20px auto;
-    display: block;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensures proper centering */
 }
 
-.download-btn {
-    padding: 10px 20px;
-    background-color: #a065c0;
-    border: none;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.download-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Bounce Animation */
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-10px); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-}
-
-.bounce {
+/* Typing Effect */
+.typing-effect {
     display: inline-block;
-    animation: bounce 2s ease 1, pause 4s ease 1 2s;
+    overflow: hidden;
+    border-right: 2px solid #a065c0; /* Cursor */
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: normal; /* Normal letter spacing */
+    animation: 
+        typing 3.5s steps(30, end),
+        blink-caret 0.75s step-end infinite;
+    vertical-align: baseline; /* Align with other text */
 }
 
-@keyframes pause {
-    0%, 100% { transform: translateY(0); }
+/* Remove cursor after typing ends */
+.typing-complete {
+    animation: none;
+    border-right: none;
 }
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The cursor blink animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #a065c0 }
+}
+
+/* Improved container for proper alignment */
+.typing-effect-container {
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    vertical-align: baseline;
+}
+
 
 /* ===================== ABOUT ===================== */
 .about {
@@ -149,7 +173,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
@@ -175,17 +199,25 @@ header {
     font-size: 20px;
     line-height: 1.4;
 }
+.download-btn {
+    padding: 10px 20px;
+    background-color: #a065c0;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.download-container {
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* ===================== SKILLS ===================== */
 .skills {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
-}
-
-.skills.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
+    transition: none;
 }
 
 .skills-list {
@@ -200,8 +232,8 @@ header {
     background-color: #f3eaf7;
     border: 1px solid #d1b3e0;
     border-radius: 15px;
-    width: 100px;
-    padding: 15px 10px;
+    width: 80px;
+    padding: 10px 5px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -213,15 +245,15 @@ header {
 }
 
 .skill-card img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .skill-card p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #4a2c59;
 }
@@ -467,36 +499,44 @@ footer {
     text-align: center;
 }
 
-/* ===================== CERTIFICATES ===================== */
+/*===================== CERTIFICATES ===================== */
 .certificates {
-    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 10px;
     background-color: #f9f9f9;
     text-align: center;
-    min-height: 300px; /* Adjust as needed */
+    min-height: 200px;
+    font-size: 0.9em; /* Decreased overall text size */
 }
 
 .cert-link {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 1.1em;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.95em;
     color: #4a2c59;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .cert-link i {
-    margin-right: 8px;
+    margin-right: 6px;
+    font-size: 1.1em;
 }
 
 .cert-link:hover {
     text-decoration: underline;
 }
+
 /* ===================== SKILLS + CERTIFICATES CONTAINER ===================== */
 .skills-certificates-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 10px;
     padding: 50px 20px;
     background-color: #fff;
 }
@@ -506,7 +546,7 @@ footer {
 .certificates {
     flex: 1 1 45%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    padding: 30px 20px;
+    padding: 50px 20px;
     border-radius: 12px;
     background-color: #ffffff;
 }
