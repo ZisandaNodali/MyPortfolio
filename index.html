@@ -13,12 +13,19 @@
         <a href="#home"
             class="logo">Zisanda.
         </a> 
-        <!-- Hamburger Icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            ☰
+
+        <div class="nav-controls">
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
         </div>
         
-
         <nav id="nav-menu">
             <ul>
                 <li><a href="#home">Home</a></li>
