@@ -3,7 +3,7 @@ document.querySelector('#download-cv').addEventListener('click', function () {
 
     // Create a hidden link element
     const link = document.createElement('a');
-    link.href = 'Images/2025ZNodaliCV2.pdf'; // update path if needed
+    link.href = 'Images/ZisandaNodali_Candidate_CV.pdf'; // update path if needed
     link.download = 'Zisanda-Nodali-CV.pdf';
     document.body.appendChild(link);
     link.click();
