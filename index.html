@@ -6,24 +6,6 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Place this CSS BEFORE the df-messenger element */
-        df-messenger {
-            --df-messenger-button-titlebar-color: #4a2c59;
-            --df-messenger-button-titlebar-font-color: #ffffff;
-            --df-messenger-chat-background-color: #ffffff;
-            --df-messenger-user-message-background-color: #479b3d;
-            --df-messenger-user-message-font-color: #ffffff;
-            --df-messenger-bot-message-background-color: #878fac;
-            --df-messenger-bot-message-font-color: #333333;
-            --df-messenger-input-background-color: #ffffff;
-            --df-messenger-input-font-color: #333333;
-            --df-messenger-input-placeholder-font-color: #888888;
-            --df-messenger-send-icon-fill-color: #4a2c59;
-            --df-messenger-chat-width: 360px;
-            --df-messenger-font-family: 'Outfit', sans-serif;
-        }
-    </style>
 </head>
 <body>
     <!-- Top Bar / Navigation -->
@@ -255,6 +237,15 @@
         agent-id="e23c9f9d-b7e7-4a77-bc73-1e563a1a0a6b"
         language-code="en"
     ></df-messenger>
+    <style>
+      df-messenger {
+        --df-messenger-button-titlebar-color: #4a2c59;
+        --df-messenger-button-titlebar-font-color: #ffffff;
+        --df-messenger-chat-background-color: #ffffff;
+        --df-messenger-user-message: #479b3d;
+        --df-messenger-bot-message: #878fac;
+      }
+    </style>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </body>
 </html>
